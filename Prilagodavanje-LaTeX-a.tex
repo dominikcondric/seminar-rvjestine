@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 
 \title{Prilagođavanje LaTeX-a}
-\author{Alen Livojević i Dominik - Matej Čondrić}
+\author{Alen Livojević \\ Dominik - Matej Čondrić}
 \institute{Tehnički fakultet Rijeka}
 \date{\today}
 
@@ -14,10 +14,33 @@
 \titlepage
 \end{frame}
 
+\begin{frame}{Sadržaj}
+\tableofcontents
+\end{frame}
+
 \section{Naredbe}
 
-\begin{frame}
+\begin{frame}[t]{Naredbe}
+\begin{itemize}
+\item Posebne riječi koje određuju ponašanje LaTeX-a
+\item Uglavnom im prethodi kosa crta "\textbackslash", te ostali parametri
+\item Pružaju laku mogućnost formatiranja dokumenta 
+\item Sastoje od jednostavnih riječi kojima prethodi poseban znak 
+\item Uz korištenje već poznatih naredbi, LaTeX nam pruža mogućnost stvaranja svojih naredbi 
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Naredbe}
+\begin{itemize}
+	\item Neke naredbe zahtjevaju više parametara kako bi ispravno radile, na primjer :
+		\begin{itemize}
+			\item Naredbi "\textbackslash textbf" potrebno je u vitičaste zagrade dodati sadržaj koji želimo podebljati :
+			\\
+			"\textbackslash textbf\{Seminar\}" će ispisati kao \textbf{seminar} \\
+			\item Naredbi "\textbackslash begin" i \textbackslash end" moramo dodati sadržaj kako bi započela neko okruženje
+		\end{itemize}	
+\end{itemize}	
+\end{frame}
 
 \bibliographystyle{ieeetr}
 \bibliography{literatura}
