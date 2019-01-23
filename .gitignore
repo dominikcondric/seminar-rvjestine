@@ -1,7 +1,7 @@
 #Nepotrebne datoteke
-Prilagodavanje-LaTeX-a.aux
-Prilagodavanje-LaTeX-a.log
-Prilagodavanje-LaTeX-a.nav
-Prilagodavanje-LaTeX-a.out
-Prilagodavanje-LaTeX-a.snm
-Prilagodavanje-LaTeX-a.toc
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
