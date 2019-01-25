@@ -2,6 +2,8 @@
 \usetheme{Boadilla}
 \usepackage[croatian]{babel}
 \usepackage[utf8]{inputenc}
+\usecolortheme{lily}
+\usepackage{amssymb}
 
 \title{Prilagođavanje LaTeX-a}
 \author{Alen Livojević \\ Dominik - Matej Čondrić}
@@ -14,7 +16,7 @@
 \titlepage
 \end{frame}
 
-\begin{frame}{Sadržaj}
+\begin{frame}[t]{Sadržaj}
 \tableofcontents
 \end{frame}
 
@@ -30,14 +32,42 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Naredbe}
+\begin{frame}[t]{Naredbe}
 \begin{itemize}
 	\item Neke naredbe zahtjevaju više parametara kako bi ispravno radile, na primjer :
 		\begin{itemize}
 			\item Naredbi "\textbackslash textbf" potrebno je u vitičaste zagrade dodati sadržaj koji želimo podebljati :
 			\\
-			"\textbackslash textbf\{Seminar\}" će ispisati kao \textbf{seminar} \\
-			\item Naredbi "\textbackslash begin" i \textbackslash end" moramo dodati sadržaj kako bi započela neko okruženje
+			"\textbackslash textbf\{Seminar\}" će ispisati kao "\textbf{Seminar}" \\
+			\item Naredbi "\textbackslash begin" i "\textbackslash end" moramo dodati sadržaj kako bi započela neko okruženje
+			\\
+			"\textbackslash begin\{itemize\}" i "\textbackslash end\{itemize\}" će započeti okuženje za liste 
+		\end{itemize}
+	\item Također možemo dodati dodatne parametre naredbama kako bi promjenili njihovo ponašanje
+		\begin{itemize}
+			\item Dodamo li parametar "\textbackslash S" naredbi "\textbackslash item" promijeniti ćemo izgled natuknice
+			\begin{itemize}
+				\item[\S] Natuknica će izgledati ovako
+			\end{itemize}	
+		\end{itemize}		
+\end{itemize}	
+\end{frame}
+
+\subsection{Dodavanje novih naredbi}
+
+\begin{frame}[t]{Dodavanje novih naredbi}
+\begin{itemize}
+	\item LaTeX nam pruža lako dodavanje svojih naredbi pomoću naredbe "\textbackslash newcommand\{ime-naredbe\}\{funkcija\}"
+	\item Primjer :
+	\begin{itemize}
+		\newcommand{\Q}{\mathbb{Q}} 
+		\item Pomoću naredbe "\textbf{\textbackslash newcommand\{\textbackslash Q\}\{\textbackslash mathbb\{Q\}\}}" Q koji označava racionalne brojeve biti će ispisan ovako : \( \Q \)
+	\end{itemize}
+	\item Iako mjesto na kojoj izrađujemo novu naredbu nije bitno, savjetuje se da se nova naredba piše u preambuli	 
+	\item Kao i kod drugih naredbi i kod stvaranja novih komandi možemo koristiti dodatni parametar koji će odrediti broj parametara 
+	\item Primjer :
+		\begin{itemize}
+			\item \textbf{\textbackslash newcommand\{\textbackslash bb\}{[}2{]}\{\textbackslash mathbb\{\#2\}\}}
 		\end{itemize}	
 \end{itemize}	
 \end{frame}
