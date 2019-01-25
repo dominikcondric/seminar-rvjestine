@@ -71,7 +71,81 @@
 		\end{itemize}	
 \end{itemize}	
 \end{frame}
+\section{Okruženja}
 
+\begin{frame}[t]{Okruženja}
+\begin{itemize}
+	\item Okruženja su razgraničena početnom oznakom \textbackslash begin i završnom oznakom \textbackslash end
+	\item Primjer je tablica
+
+
+\begin{tabular}{ c c c } 
+  cell1 & cell2 & cell3 \\ 
+  cell4 & cell5 & cell6 \\ 
+  cell7 & cell8 & cell9 \\ 
+ \end{tabular}
+
+\item odnosno zapis u kodu:
+
+\textbackslash begin\{tabular\}\{ c c c \} 
+  cell1 \& cell2 \& cell3 \\ 
+  cell4 \& cell5 \& cell6 \\ 
+  cell7 \& cell8 \& cell9 \\ 
+ end\{tabular\}
+
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Definiranje novog okruženja}
+\begin{itemize}
+
+\item Kao i kod naredbi, možete definirati nova okruženja
+\item Nova definicija okruženja postiže se oznakom \textbackslash newenvironment
+\item Primjer:
+\textbackslash newenvironment\{boxed\}\\
+\{\textbackslash begin\{center\}\\
+    \textbackslash begin\{tabular\}\{|p\{0.9\textbackslash textwidth\}|\}\\
+    \textbackslash hline\\
+    \}\\
+    \{ \\
+    \textbackslash hline\\
+    \textbackslash end\{tabular\} \\
+    \textbackslash end\{center\}\\
+    \}\\
+    \item Ovo okruženje će nacrtati okvir oko teksta
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item Odmah nakon novog okruženja, između zagrada, morate napisati ime okoline
+	\item Unutar prvog para zagrada je postavljeno što će vaše novo okruženje učiniti prije nego što tekst bude unutar, a zatim unutar drugog para zagrada odredite što će vaše novo okruženje učiniti nakon teksta
+\item Rezultat:
+\begin{boxed}
+T
+\end{boxed}
+
+	\item Mogu se definirati i okruženja koja prihvaćaju parametre
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Numerirana okruženja}
+\begin{itemize}
+	\item Numerirana okruženja mogu se kreirati ručno ili izravno pomoću naredbe \textbackslash newtheorem\\
+
+\textbackslash newcounter\{example\}[section]\\
+\textbackslash newenvironment\{example\}[1][]\{\textbackslash refstepcounter\{example\}\textbackslash par\textbackslash medskip\\
+   \textbackslash noindent \textbackslash textbf\{Example~\textbackslash theexample. \#1\} \textbackslash rmfamily\}\{\textbackslash medskip\}\\
+ 
+ 
+
+\textbackslash usepackage\{amsmath\}\\
+\textbackslash newtheorem\{SampleEnv\}\{Sample Environment\}[section]\\
+
+\end{itemize}
+\end{frame}
 \bibliographystyle{ieeetr}
 \bibliography{literatura}
 
