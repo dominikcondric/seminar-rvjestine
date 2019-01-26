@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usecolortheme{lily}
 \usepackage{amssymb}
+\newcommand{\plusbinomial}[3][2]{(#2 + #3) ^ #1}
 
 \title{Prilagođavanje LaTeX-a}
 \author{Alen Livojević \\ Dominik - Matej Čondrić}
@@ -74,9 +75,32 @@
 
 \subsection{Naredbe s neobaveznim parametrima}
 
-\begin{frame}
+\begin{frame}[t]{Naredbe s neobaveznim parametrima}
 \begin{itemize}
-	\item 
+	\item Da bi poboljšali funkcioniranje naredbe dodajemo dodatne parametre u uglate zagrade
+		\item Naredbu \textbf{\textbackslash newcommand\{\textbackslash plusbinomial\}{[}3{]}{[}2{]}\{(\#2 + \#3) \^\ \#1\}} će ispisati na sljedeći način :
+				\[ \plusbinomial[4]{x}{y} \]
+		\begin{itemize}
+			\item \textbackslash plusbinomial označava ime nove naredbe		
+			\item {[}3{]} označava broj parametara koje će naredba uzeti
+			\item {[}2{]} je unaprijed definiran broj za prvi parametar
+			\item  \{(\#2 + \#3) \^\ \#1\} je funckija nove naredbe, u ovom slučaju kvadrat zbroja
+		\end{itemize}
+\end{itemize}	
+\end{frame}
+
+\subsection{Stvaranje novih naredbi preko postojećih}
+
+\begin{frame}[t]{Stvaranje novih naredbi preko postojećih}
+\begin{itemize}
+	\item Ukoliko želimo uvesti novu naredbu čije ime već postoji, LaTeX će javiti prilikom stvaranja dokumenta
+	\item Da bi uveli novu naredbu s istim imenom preko već definirane naredbe koristimo naredbu "\textbackslash renewcommand" 
+	\item Primjer : \\
+			\textbf{\textbackslash renewcommand\{\textbackslash S\}\{\textbackslash mathbb\{S\}\}} \\
+			Pozivom na naredbu \textbackslash ( \textbackslash S \textbackslash ) koja bi inače bila prevođena kao znak za beskonačnost ($\infty$) postaje znak 
+			$\renewcommand{\S}{\mathbb{S}}$ 
+										\( \S \)
+										
 \end{itemize}	
 \end{frame}
 
@@ -105,7 +129,6 @@
 
 \end{itemize}
 \end{frame}
-\subsection{Definiranje novog okruženja}
 
 \subsection{Definiranje novog okruženja}
 
@@ -142,13 +165,10 @@ T
 
 \end{itemize}
 \end{frame}
-<<<<<<< HEAD
 
-\subsection{Numeriranje okruženja}
 
-=======
 \subsection{Numerirana okruženja}
->>>>>>> 46f26a5f7b1bf3f3b59378e2cb863bd0f661f17b
+
 \begin{frame}{Numerirana okruženja}
 \begin{itemize}
 	\item Numerirana okruženja mogu se kreirati ručno ili izravno pomoću naredbe \textbackslash newtheorem\\
@@ -174,9 +194,12 @@ Numerirani dio
 \end{example1}
 
 \end{frame}
-\subsection{Zaključak}
-\begin{frame}{Zaključak}
+\section{Zaključak}
+\begin{frame}[t]{Zaključak}
 \begin{itemize}
+	\item Naredbe nam pružaju laku mogućnost uređivanja i prilagođavanja sardžaja
+	\item Naredbe mogu biti bez ili sa obaveznim parametrima, uz moguće dodavanje dodatnih parametara
+	\item Uz već postojeće naredbe imamo mogućnost dodavati svoje ili promijeniti funkciju već postojećih naredbi
 	\item Okruženje se koristi s odgovarajućim parom početnih i završnih izraza (\textbackslash begin i \textbackslash end)
 	\item Oboje počinju i završavaju naziv okruženja kao argument u vitičastim zagradama
 	\item Početni izraz može imati dodatne obvezne i / ili neobavezne argumente
