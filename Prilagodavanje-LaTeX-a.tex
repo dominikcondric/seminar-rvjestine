@@ -157,6 +157,24 @@ Numerirani dio
 \end{example1}
 
 \end{frame}
+\subsection{Vlastiti paketi}
+\begin{frame}{Vlastiti paketi}
+\begin{itemize}
+	\item Ako definirate mnogo novih okruženja i naredbi, preambula
+vašeg dokumenta će biti prilično duga
+	\item U takvoj situaciji, dobra je ideja
+stvoriti paket koji sadrži sve vaše naredbe i okruženja:\\
+ Demo Package by Tobias Oetiker\\
+\textbackslash ProvidesPackage\{demopack\}\\
+\textbackslash newcommand\{\textbackslash tnss\}\{The not so Short Introduction\\
+to \textbackslash LaTeXe\}\\
+\textbackslash newcommand\{\textbackslash txsit\}[1]\{The \textbackslash emph\{\#1\} Short\\
+Introduction to \textbackslash LaTeXe\}\\
+\textbackslash newenvironment\{king\}\{\textbackslash begin\{quote\}\}\{\textbackslash end\{quote\}\}\\
+\end{itemize}
+\end{frame}
+
+
 \subsection{Zaključak}
 \begin{frame}{Zaključak}
 \begin{itemize}
