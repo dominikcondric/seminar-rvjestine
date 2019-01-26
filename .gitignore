@@ -5,3 +5,8 @@
 *.out
 *.snm
 *.toc
+*.fls
+*.bbl
+*.blg
+*.fdb_latexmk
+*.synctex.gz
