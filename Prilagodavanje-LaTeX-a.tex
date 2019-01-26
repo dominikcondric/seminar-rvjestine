@@ -105,6 +105,7 @@
 
 \end{itemize}
 \end{frame}
+\subsection{Definiranje novog okruženja}
 
 \subsection{Definiranje novog okruženja}
 
@@ -141,9 +142,13 @@ T
 
 \end{itemize}
 \end{frame}
+<<<<<<< HEAD
 
 \subsection{Numeriranje okruženja}
 
+=======
+\subsection{Numerirana okruženja}
+>>>>>>> 46f26a5f7b1bf3f3b59378e2cb863bd0f661f17b
 \begin{frame}{Numerirana okruženja}
 \begin{itemize}
 	\item Numerirana okruženja mogu se kreirati ručno ili izravno pomoću naredbe \textbackslash newtheorem\\
@@ -159,6 +164,27 @@ T
 
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Primjer:}
+\newcounter{example1}[section]
+\newenvironment{example1}[1][]{\refstepcounter{example1}\par\medskip
+   \noindent \textbf{Primjer~\theexample. } \rmfamily}{\medskip}
+   \begin{example1}
+Numerirani dio
+\end{example1}
+
+\end{frame}
+\subsection{Zaključak}
+\begin{frame}{Zaključak}
+\begin{itemize}
+	\item Okruženje se koristi s odgovarajućim parom početnih i završnih izraza (\textbackslash begin i \textbackslash end)
+	\item Oboje počinju i završavaju naziv okruženja kao argument u vitičastim zagradama
+	\item Početni izraz može imati dodatne obvezne i / ili neobavezne argumente
+
+\end{itemize}
+\end{frame}
+
+
 \bibliographystyle{ieeetr}
 \bibliography{literatura}
 
