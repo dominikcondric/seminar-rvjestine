@@ -48,7 +48,7 @@
 		\begin{itemize}
 			\item Dodamo li parametar "\textbackslash S" naredbi "\textbackslash item" promijeniti ćemo izgled natuknice
 			\begin{itemize}
-				\item[\S] Natuknica će izgledati ovako
+				\item[\S] Natuknica će izgledati ovako 
 			\end{itemize}	
 		\end{itemize}		
 \end{itemize}	
@@ -73,9 +73,9 @@
 \end{itemize}	
 \end{frame}
 
-\subsection{Naredbe s neobaveznim parametrima}
+\subsection{Naredbe s dodatnim parametrima}
 
-\begin{frame}[t]{Naredbe s neobaveznim parametrima}
+\begin{frame}[t]{Naredbe s dodatnim parametrima}
 \begin{itemize}
 	\item Da bi poboljšali funkcioniranje naredbe dodajemo dodatne parametre u uglate zagrade
 		\item Naredbu \textbf{\textbackslash newcommand\{\textbackslash plusbinomial\}{[}3{]}{[}2{]}\{(\#2 + \#3) \^\ \#1\}} će ispisati na sljedeći način :
@@ -152,7 +152,9 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+
+
+\begin{frame}[t]{Definiranje novog okruženja}
 \begin{itemize}
 	\item Odmah nakon novog okruženja, između zagrada, morate napisati ime okoline
 	\item Unutar prvog para zagrada je postavljeno što će vaše novo okruženje učiniti prije nego što tekst bude unutar, a zatim unutar drugog para zagrada odredite što će vaše novo okruženje učiniti nakon teksta
@@ -169,18 +171,18 @@ T
 
 \subsection{Numerirana okruženja}
 
-\begin{frame}{Numerirana okruženja}
+\begin{frame}[t]{Numerirana okruženja}
 \begin{itemize}
 	\item Numerirana okruženja mogu se kreirati ručno ili izravno pomoću naredbe \textbackslash newtheorem\\
 
-\textbackslash newcounter\{example\}[section]\\
+\textbackslash newcounter\{example\}{[}section{]}\\
 \textbackslash newenvironment\{example\}[1][]\{\textbackslash refstepcounter\{example\}\textbackslash par\textbackslash medskip\\
    \textbackslash noindent \textbackslash textbf\{Example~\textbackslash theexample. \#1\} \textbackslash rmfamily\}\{\textbackslash medskip\}\\
  
  
 
 \textbackslash usepackage\{amsmath\}\\
-\textbackslash newtheorem\{SampleEnv\}\{Sample Environment\}[section]\\
+\textbackslash newtheorem\{SampleEnv\}\{Sample Environment\}{[}section{]}\\
 
 \end{itemize}
 \end{frame}
@@ -194,12 +196,13 @@ Numerirani dio
 \end{example1}
 
 \end{frame}
-<<<<<<< HEAD
-\section{Zaključak}
-\begin{frame}[t]{Zaključak}
-=======
+
+
 \subsection{Vlastiti paketi}
-\begin{frame}{Vlastiti paketi}
+
+
+\begin{frame}[t]{Vlastiti paketi}
+
 \begin{itemize}
 	\item Ako definirate mnogo novih okruženja i naredbi, preambula
 vašeg dokumenta će biti prilično duga
@@ -216,9 +219,9 @@ Introduction to \textbackslash LaTeXe\}\\
 \end{frame}
 
 
-\subsection{Zaključak}
-\begin{frame}{Zaključak}
->>>>>>> 191e73a77b963df95641c5efac92171350dc21d3
+\section{Zaključak}
+
+\begin{frame}[t]{Zaključak}
 \begin{itemize}
 	\item Naredbe nam pružaju laku mogućnost uređivanja i prilagođavanja sardžaja
 	\item Naredbe mogu biti bez ili sa obaveznim parametrima, uz moguće dodavanje dodatnih parametara
@@ -226,12 +229,13 @@ Introduction to \textbackslash LaTeXe\}\\
 	\item Okruženje se koristi s odgovarajućim parom početnih i završnih izraza (\textbackslash begin i \textbackslash end)
 	\item Oboje počinju i završavaju naziv okruženja kao argument u vitičastim zagradama
 	\item Početni izraz može imati dodatne obvezne i / ili neobavezne argumente
-
 \end{itemize}
 \end{frame}
 
-
+\nocite{*}
+\begin{frame}[t]{Literatura}
 \bibliographystyle{ieeetr}
-\bibliography{literatura}
+\bibliography{literatura.bib}
+\end{frame}
 
 \end{document}
